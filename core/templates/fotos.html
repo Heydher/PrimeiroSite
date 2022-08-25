@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fotos</title>
+</head>
+<body>
+<ul>
+    {% if fotos.count > 0 %}
+        {% for foto in fotos %}
+            <li>
+                <h3>{{ foto.titulo }}</h3>
+                <p>{{ foto.texto }}</p>
+                <img src="{% static 'img/testimonial/david.jpg' %}">
+            </li>
+        {% endfor %}
+    {% else %}
+        <h3>Sem fotos ainda</h3>
+    {% endif %}
+
+</ul>
+
+</body>
+</html>
